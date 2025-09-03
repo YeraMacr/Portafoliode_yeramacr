@@ -3,25 +3,56 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, hsl(210, 38%, 59%), #bdc3c7);
-    color: #333;
+background: url("IMG/fondoimagen.png") center / cover no-repeat fixed, linear-gradient(135deg, hsl(210, 52%, 80%), #bdc3c7);
+
 } 
 
 /* Estilos del encabezado */
 header {
-    background: #222;
-    color: white;
-    padding: 1% 4%;
+background: rgba(70, 60, 60, 0.55);
+    color: rgb(8, 5, 5);
+    padding: 2% 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;            
+    gap: 12px 24px;             
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 2.0em;
     font-weight: bold;
 }
+.logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+}
+.about {
+  background: rgba(255, 255, 255, 0.82); /* cuadro claro, se ve el fondo */
+  backdrop-filter: blur(2px);
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 900px;
+  color: #111; /* texto oscuro */
+}
+
+.about h1 {
+  color: #111;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.about p {
+  color: #1f2937; /* gris oscuro muy legible */
+}
+
 
 nav ul {
     list-style: none;
@@ -42,7 +73,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: hsl(214, 100%, 50%)
+    color: hsl(214, 100%, 50%);
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
 }
 
 /* Hero section */
@@ -129,8 +164,10 @@ nav ul li a:hover {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform .30s ease, box-shadow .30s ease, background .30s ease, border-color .30s ease;
+    animation: card-in 700ms ease both;   /* entrada suave al cargar */
 }
+
 
 @media (max-width: 768px) {
     .features {
@@ -144,6 +181,8 @@ nav ul li a:hover {
 
 .feature-box h2 {
     color: #222;
+    margin: 0 0 12px;  /* NUEVO: separa el título del párrafo */
+    font-weight: 700;  /* NUEVO: título más sólido */
 }
 
 .feature-box a {
@@ -156,6 +195,24 @@ nav ul li a:hover {
 
 .feature-box a:hover {
     text-decoration: underline;
+}
+section.feature-box:nth-of-type(odd) { background: #ffffff; }
+section.feature-box:nth-of-type(even) { background: #f7f9fb; }
+
+@media (min-width: 992px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+}
+
+
+.feature-box p {
+  line-height: 1.6;
+  max-width: 72ch;      
+  margin: 0 auto;      
 }
 
 /* Productos */
@@ -221,7 +278,7 @@ nav ul li a:hover {
 /* Contacto */
 .contact {
     padding: 5% 8%;
-    background: white;
+    background: rgb(194, 191, 191);
     text-align: center;
 }
 
@@ -280,4 +337,9 @@ footer {
     padding: 2%;
     margin-top: 5%;
     font-size: 1em;
+}
+/* ===== Animaciones ===== */
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
