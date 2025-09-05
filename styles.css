@@ -377,16 +377,6 @@ footer {
 .product-box details[open] > summary::after {
     transform: rotate(180deg);
 }
-/* Fondo semi-transparente para las cajas de productos */
-.product-box {
-    background: rgba(255, 255, 255, 0.7);  /* Fondo blanco con un 70% de transparencia */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
 /* Efecto al pasar el ratón */
 .product-box:hover {
     transform: translateY(-10px);
@@ -430,6 +420,7 @@ input:focus, textarea:focus {
 .products .product-box h2, .products .product-box p {
     color: #222;  /* Color oscuro para que el texto se lea bien */
 }
+
 
 
 
