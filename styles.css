@@ -226,7 +226,7 @@ section.feature-box:nth-of-type(even) { background: #f7f9fb; }
 }
 
 .product-box {
-    background: rgba(255,255,0.8);
+    background: rgba(255,255,0.6);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -377,10 +377,9 @@ footer {
 .product-box details[open] > summary::after {
     transform: rotate(180deg);
 }
-
-/* Fondo de los productos con transparencia */
+/* Fondo semi-transparente para las cajas de productos */
 .product-box {
-    background: rgba(255, 255, 255, 0.8);  /* Fondo blanco con algo de transparencia */
+    background: rgba(255, 255, 255, 0.7);  /* Fondo blanco con un 70% de transparencia */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -388,7 +387,6 @@ footer {
     position: relative;
     overflow: hidden;
 }
-
 /* Efecto al pasar el ratón */
 .product-box:hover {
     transform: translateY(-10px);
@@ -433,13 +431,6 @@ input:focus, textarea:focus {
     color: #222;  /* Color oscuro para que el texto se lea bien */
 }
 
-/* Fondo para los detalles dentro de cada producto */
-.product-box details {
-    background: rgba(255, 255, 255, 0.9);  /* Fondo más opaco para que el texto se lea bien */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 
 
