@@ -35,7 +35,7 @@ background: rgba(70, 60, 60, 0.55);
     display: inline-block;
 }
 .about {
-  background: rgba(255, 255, 255, 0.82); /* cuadro claro, se ve el fondo */
+  background: rgba(255, 255, 255, 0.6); /* cuadro claro, se ve el fondo */
   backdrop-filter: blur(2px);
   padding: 10px 14px;
   border-radius: 12px;
@@ -420,6 +420,7 @@ input:focus, textarea:focus {
 .products .product-box h2, .products .product-box p {
     color: #222;  /* Color oscuro para que el texto se lea bien */
 }
+
 
 
 
