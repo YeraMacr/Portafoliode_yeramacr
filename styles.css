@@ -411,5 +411,36 @@ input:focus, textarea:focus {
     border-color: #4CAF50;  /* Borde verde al hacer focus */
     background-color: rgba(255, 255, 255, 1);  /* Fondo blanco cuando está seleccionado */
 }
+/* Fondo semi-transparente para las cajas de productos */
+.products .product-box {
+    background: rgba(255, 255, 255, 0.8);  /* Fondo blanco con algo de transparencia */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto al pasar el ratón */
+.products .product-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Fondo de los textos en los productos, también semi-transparente */
+.products .product-box h2, .products .product-box p {
+    color: #222;  /* Color oscuro para que el texto se lea bien */
+}
+
+/* Fondo para los detalles dentro de cada producto */
+.product-box details {
+    background: rgba(255, 255, 255, 0.9);  /* Fondo más opaco para que el texto se lea bien */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
